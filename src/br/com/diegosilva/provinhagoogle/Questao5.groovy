@@ -10,11 +10,36 @@ def alphabeto = "lcwxqtpsvmknjrfdzbgh"
 def calculaValor(String palavra){
 	Long retorno = 0;
 	String al = "lcwxqtpsvmknjrfdzbgh"
+	Long base = 1;
 	for(int i=0; i< palavra.length(); i++){
 		def letra = palavra[i]
 		def pos = al.indexOf(letra)
-		println pos
+		retorno +=(base*pos)
+		base = base*20;
+	}
+	return retorno;
+}
+
+assert calculaValor("vfb") == 7088;
+
+def numerosBonitos = new HashSet()
+//verifica os numeros bonitos do texto A
+textoA.split(" ").each { it->
+	Long res = calculaValor(it)
+	if(res >= 876389 && (res % 3 == 0)){
+		numerosBonitos+=res;
 	}
 }
 
-textoA.split(" ").each { it-> calculaValor(it) }
+assert numerosBonitos.size() == 115
+
+numerosBonitos = new HashSet()
+//verifica os numeros bonitos do texto B
+textoB.split(" ").each { it->
+	Long res = calculaValor(it)
+	if(res >= 876389 && (res % 3 == 0)){
+		numerosBonitos+=res;
+	}
+}
+
+println 'O texto B possui '+ numerosBonitos.size()+' números bonitos distintos'
