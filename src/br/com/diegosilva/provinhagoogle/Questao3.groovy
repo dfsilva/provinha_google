@@ -6,4 +6,4 @@ def textoB = this.getClass().getClassLoader().getResourceAsStream("textoB").getT
 def preposicoesTexto1pessoa = [];
 def matcher4 = textoB =~ /[lpkdz][a-z]{6}[lpkdz]/
 matcher4.each {preposicoesTexto1pessoa+=it }
-println 'Destas preposicoes '+preposicoesTexto1pessoa.size()+' estão em 1 pessoa'
+println 'Destes verbos '+preposicoesTexto1pessoa.size()+' estão em 1a pessoa'

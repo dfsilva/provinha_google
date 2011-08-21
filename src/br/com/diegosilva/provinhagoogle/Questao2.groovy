@@ -7,4 +7,4 @@ def textoB = this.getClass().getClassLoader().getResourceAsStream("textoB").getT
 def preposicoesTextoC = [];
 def matcher3 = textoB =~ /[a-z]{7}[lpkdz]/
 matcher3.each {preposicoesTextoC+=it }
-println 'O texto B possui '+ preposicoesTextoC.size()+' preposicoes'
+println 'O texto B possui '+ preposicoesTextoC.size()+' verbos'

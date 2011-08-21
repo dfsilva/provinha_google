@@ -3,9 +3,6 @@ package br.com.diegosilva.provinhagoogle
 def textoA = this.getClass().getClassLoader().getResourceAsStream("textoA").getText();
 def textoB = this.getClass().getClassLoader().getResourceAsStream("textoB").getText();
 
-//questao 5
-def alphabeto = "lcwxqtpsvmknjrfdzbgh"
-
 //calcula o valor de uma palavra em goglon.
 def calculaValor(String palavra){
 	Long retorno = 0;
